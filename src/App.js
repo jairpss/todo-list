@@ -21,7 +21,7 @@ const App = () => {
     <div className='contenedor'>
       <Header />
       <Form tareas={tareas} cambiarTareas={cambiarTareas}/>
-      <ListaTareas tareas={tareas}/>
+      <ListaTareas tareas={tareas} cambiarTareas={cambiarTareas}/>
     </div>
   );
 }
