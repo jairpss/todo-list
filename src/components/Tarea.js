@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckSquare, faEdit, faTimes, faSquare } from '@fortawesome/free-solid-svg-icons';
 
-const Tarea = ({tarea, toggleCompletada}) => {
+const Tarea = ({tarea, toggleCompletada, editarTarea, borrarTarea}) => {
     const [editandoTarea, cambiarTarea] = useState(false);
     const [nuevaTarea, cambiarNuevaTarea] = useState(tarea.texto);
    
     const handleSubmit = (e) => {
         e.preventDefault();
+        editarTarea(tarea.id, nuevaTarea);
         cambiarTarea(false);
     }
 
@@ -41,6 +42,7 @@ const Tarea = ({tarea, toggleCompletada}) => {
                 <FontAwesomeIcon 
                     icon={faTimes} 
                     className='lista-tareas__icono lista-tareas__icono-accion'
+                    onClick={() => borrarTarea(tarea.id)}
                 />
             </div>
             
