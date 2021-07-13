@@ -1,8 +1,8 @@
 import './App.css';
 import React, { useState, useEffect } from 'react'
-import Header from './src/components/Header';
-import Form from './src/components/Form';
-import ListaTareas from './src/components/ListaTareas';
+import Header from './components/Header';
+import Form from './components/Form';
+import ListaTareas from './components/ListaTareas';
 
 const App = () => {
 
